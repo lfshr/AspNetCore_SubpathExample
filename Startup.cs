@@ -56,8 +56,7 @@ namespace KubernetesSubpathExample
             // If the path is specified but doesn't begin with a forward slash
             // throw an exception. Root path must begin with forward slash.
             // Better to explicitly require it than make it magic.
-            if (pathBase.StartsWith("/") == false 
-                && string.IsNullOrEmpty(pathBase) == false)
+            if (pathBase.StartsWith("/") == false)
             {
                 throw new Exception($"\"{pathBase}\" is not a valid PathBase. PathBase must start with /");
             }
