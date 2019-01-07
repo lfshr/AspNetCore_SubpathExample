@@ -59,7 +59,7 @@ namespace KubernetesSubpathExample
             if (pathBase.StartsWith("/") == false 
                 && string.IsNullOrEmpty(pathBase) == false)
             {
-                throw new Exception("If Configuration[\"PathBase\"] is specified it must begin with /");
+                throw new Exception($"\"{pathBase}\" is not a valid PathBase. PathBase must start with /");
             }
 
             return pathBase;
